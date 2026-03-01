@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="keywords" content="dungeons & dragons, dnd, d&d, 5e, dnd5e, 5etools">
+      <meta name="description" content="A very simple height and weight calculator for Dungeons & Dragons 5th Edition Characters.">
+      <meta name="author" content="Northrup69">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Height & Weight Calculator for Dungeons & Dragons 5th Edition Characters</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="icon" type="image/x-icon" href="assets/icon.ico">
+      <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="card">
+            <div class="header">
+               <h1>Height & Weight Calculator</h1>
+               <h2>for <span>Dungeons & Dragons</span> 5th Edition Characters</h2>
+               <hr>
+            </div>
+            <div class="calculator">
+               <div class="input">
+                  <div class="heightCalc">
+                     <div class="table">
+                        <div class="tableHead">
+                           <h3>Base Height</h3>
+                        </div>
+                        <div class="tableRow">
+                           <div class="tableCellLeft"><label>Feet</label></div>
+                           <div class="tableCellRight"><input type="number" id="baseHeightFt" value="4" min="0"></div>
+                        </div>
+                        <div class="tableRow">
+                           <div class="tableCellLeft"><label>Inches</label></div>
+                           <div class="tableCellRight"><input type="number" id="baseHeightIn" value="8" min="0" max="11"></div>
+                        </div>
+                        <div class="tableHead">
+                           <h3>Height Modifier</h3>
+                        </div>
+                        <div class="tableRow">
+                           <div class="tableCellLeft"><label>Method</label></div>
+                           <div class="tableCellRight">
+                              <select id="heightMethod">
+                                 <option value="manual">Manual Input</option>
+                                 <option value="digital">Digital Dice Rolling</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div id="heightManual" class="subsection">
+                           <div class="tableRow">
+                              <div class="tableCellLeft"><label>Rolled</label></div>
+                              <div class="tableCellRight"><input type="number" id="heightManualInput" value="10"></div>
+                           </div>
+                        </div>
+                        <div id="heightDigital" class="subsection" style="display:none;">
+                           <div class="tableRow">
+                              <div class="tableCellLeft"><label>Dice Count</label></div>
+                              <div class="tableCellRight"><input type="number" id="heightDiceCount" value="2" min="1"></div>
+                           </div>
+                           <div class="tableRow">
+                              <div class="tableCellLeft"><label>Dice Type</label></div>
+                              <div class="tableCellRight">
+                                 <select id="heightDiceType">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10" selected>d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="tableRow">
+                              <div class="tableCellLeft"><button class="btnSecond" id="rollHeight">Roll Dice</button></div>
+                              <div class="tableCellRight"><input type="text" id="heightRollResult" value="10" readonly="readonly"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="separator horizontal"></div>
+                  <div class="weightCalc">
+                     <div class="table">
+                        <div class="tableHead">
+                           <h3>Base Weight</h3>
+                        </div>
+                        <div class="tableRow">
+                           <div class="tableCellLeft"><label>Weight (lbs)</label></div>
+                           <div class="tableCellRight"><input type="number" id="baseWeight" value="110"></div>
+                        </div>
+                        <div class="tableHead">
+                           <h3>Weight Modifier</h3>
+                        </div>
+                        <div class="tableRow">
+                           <div class="tableCellLeft"><label>Method</label></div>
+                           <div class="tableCellRight">
+                              <select id="weightMethod">
+                                 <option value="manual">Manual Input</option>
+                                 <option value="digital">Digital Dice Rolling</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div id="weightManual" class="subsection">
+                           <div class="tableRow">
+                              <div class="tableCellLeft"><label>Rolled</label></div>
+                              <div class="tableCellRight"><input type="number" id="weightManualInput" value="3"></div>
+                           </div>
+                        </div>
+                        <div id="weightDigital" class="subsection" style="display: none;">
+                           <div class="tableRow">
+                              <div class="tableCellLeft"><label>Dice Count</label></div>
+                              <div class="tableCellRight"><input type="number" id="weightDiceCount" value="2" min="1"></div>
+                           </div>
+                           <div class="tableRow">
+                              <div class="tableCellLeft"><label>Dice Type</label></div>
+                              <div class="tableCellRight">
+                                 <select id="weightDiceType">
+                                    <option value="4" selected="">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                 </select>
+                              </div>
+                           </div>
+                           <div class="tableRow">
+                              <div class="tableCellLeft"><button class="btnSecond" id="rollWeight">Roll Dice</button></div>
+                              <div class="tableCellRight"><input type="text" id="weightRollResult" value="3" readonly="readonly"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <button class="btnPrime" id="calculate">Calculate</button>
+                  <br><br>
+                  <button class="btnSecond" id="reset">Reset to Defaults</button>
+               </div>
+               <div class="separator"></div>
+               <div class="result" id="result"></div>
+            </div>
+            <div class="credits" style="display: none;">
+               <h4>Credits<a href="#" id="backToCalculator">×</a></h4>
+               
+               <p><img src="assets/icon.svg" alt="Icon" style="height:32px; vertical-align:middle; margin-right:10px;">This tool was developed by <i><a href="https://github.com/Northrup69" target="_blank">Northrup69</a></i>.</p>
+               <br><br>
+               <h5>Used libraries:</h5>
+               <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+               </ul>
+               <h5>Fonts:</h5>
+               <ul>
+                  <li><i>Nodesto Caps Condensed</i> by <i>Solbera</i>, used under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> license.</li>
+                  <li><i>Scaly Sans (Remake)</i> by <i>Solbera</i>, used under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> license.</li>
+               </ul>
+               <h5>Background Image:</h5>
+               <ul>
+                  <li><i><a href="https://www.publicdomainpictures.net/en/view-image.php?image=56151" target="_blank">Old Paper Texture Background</a></i> by <i><a href="https://www.publicdomainpictures.net/en/browse-author.php?a=32495" target="_blank">Karen Arnold</a></i>, used under the <a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 Public Domain</a> license.</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="wrapper">
+         <footer>&copy;<script>document.write(new Date().getFullYear())</script> | v0.5beta | <a href="#">Credits</a>
+         </footer>
+      </div>
+      <script src="js/script.js" defer></script>
+   </body>
+</html>
