@@ -13,7 +13,7 @@ This Webpage provides a simple user interface to easily calculate the height and
 <br>
   
 ## How to use
-Open the [D&D Height & Weight Calculator](https://northrup69.github.io/dnd-height-weight-calc) Webpage and enter the *Base Height*, *Height Modifier*, *Base Weight*, and *Weight Modifier* specified for your character's race in the corresponding boxes and click on the Calculate button.
+Open the [D&D Height & Weight Calculator](https://northrup69.github.io/dnd-height-weight-calc) Webpage and enter the *Base Height*, *Height Modifier*, *Base Weight*, and *Weight Modifier* specified for your character's race into the corresponding boxes and click on the Calculate button.
 
 <br>
 
@@ -26,7 +26,7 @@ Open the [D&D Height & Weight Calculator](https://northrup69.github.io/dnd-heigh
 <br>
 
 After the calculation, the following data is displayed:
-* Height (in ft & in and cm)
+* Height (in feet & inches and centimeters)
 * Weight (in lbs and kg) 
 * Build (Slender, Average, Broad, Massive; color-coded)
 * Human-equivalent BMI (Underweight, Healthy, Overweight, Obesity Class I-III; color-coded)
