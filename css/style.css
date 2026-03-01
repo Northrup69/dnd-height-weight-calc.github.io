@@ -1,0 +1,364 @@
+@font-face {
+  font-family: "Nodesto Caps Condensed";
+  src: local("Nodesto Caps Condensed"),
+    url("./Nodesto Caps Condensed/Nodesto Caps Condensed.otf"),
+    url("https://raw.githubusercontent.com/jonathonf/solbera-dnd-fonts/master/Nodesto%20Caps%20Condensed/Nodesto%20Caps%20Condensed.otf")
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Scaly Sans";
+  src: local("Scaly Sans"), url("./Scaly Sans/Scaly Sans.otf"),
+    url("https://raw.githubusercontent.com/jonathonf/solbera-dnd-fonts/master/Scaly%20Sans/Scaly%20Sans.otf")
+      format("opentype");
+}
+
+body {
+  margin: auto;
+  background-color: white;
+  background-image: url("https://www.publicdomainpictures.net/pictures/60000/velka/old-paper-texture-background-1380404417tNE.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  font-family: "Scaly Sans";
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: normal;
+  padding: 25px;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration-style: dashed;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+}
+
+label {
+  padding: 0 8px;
+}
+
+select {
+  width: 100%;
+  height: 2em;
+  border: none;
+  padding: 0 8px;
+  background-color: white;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: calc(100% - 12px);
+  height: 2em;
+  border: none;
+  padding: 0 0 0 8px;
+}
+
+h1 {
+  font-family: "Nodesto Caps Condensed";
+  font-size: 3em;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin: 15px 0 0 0;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+h2 {
+  font-family: "Nodesto Caps Condensed";
+  font-size: 2em;
+  line-height: 1em;
+  text-align: center;
+  margin: auto;
+  color: #212529;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.75);
+}
+
+h2 span {
+  color: #da3737;
+}
+
+h3 {
+  margin: auto;
+  font-weight: normal;
+  text-align: center;
+  font-size: 1em;
+}
+
+h4 {
+  font-weight: bold;
+  line-height: 1em;
+}
+
+h4 a {
+  float: right;
+  color: #da3737;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h5 {
+  font-weight: bold;
+  margin: auto;
+}
+
+hr {
+  background: linear-gradient(
+    to right,
+    rgba(154, 21, 21, 0),
+    #da3737,
+    rgba(154, 21, 21, 0)
+  );
+  width: 500px;
+  height: 0.25em;
+  border: none;
+  margin-bottom: 2em;
+}
+
+button.btnPrime {
+  background-color: #555555;
+  color: rgba(222, 226, 230, 1);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 24px;
+}
+
+button.btnPrime:hover {
+  background-color: #e7e7e7;
+  color: #555555;
+}
+
+button.btnSecond {
+  background-color: #e7e7e7;
+  color: #555555;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 3px 15px;
+}
+
+button.btnSecond:hover {
+  background-color: #555555;
+  color: rgba(222, 226, 230, 1);
+}
+
+summary {
+  font-size: 0.9em;
+  color: #555555;
+}
+
+div.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.wrapper .card {
+  border-radius: 25px;
+  background-color: rgba(190, 182, 169, 0.75);
+  width: 750px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px 25px 25px 25px;
+}
+
+div.wrapper .card .calculator {
+  display: -webkit-flex;
+  display: flex;
+  gap: 10px;
+}
+
+div.wrapper .card .calculator .input {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+}
+
+div.wrapper .card .calculator .input .heightCalc,
+div.wrapper .card .calculator .input .weightCalc {
+  margin-bottom: 15px;
+}
+
+div.wrapper .card .calculator .input .separator.horizontal {
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+div.wrapper .card .calculator .input .heightCalc .table,
+div.wrapper .card .calculator .input .weightCalc .table {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-bottom: 2px solid #da3737;
+}
+
+div.wrapper .card .calculator .input .heightCalc .table .tableHead,
+div.wrapper .card .calculator .input .weightCalc .table .tableHead {
+  color: white;
+  background-color: #da3737;
+  font-weight: bold;
+  line-height: 1.75em;
+}
+
+div.wrapper .card .calculator .input .heightCalc .table .tableRow,
+div.wrapper .card .calculator .input .weightCalc .table .tableRow {
+  display: table-row;
+  background-color: rgba(222, 226, 230, 0.75);
+}
+
+div.wrapper
+  .card
+  .calculator
+  .input
+  .heightCalc
+  .table
+  .tableRow
+  .tableCellLeft,
+div.wrapper
+  .card
+  .calculator
+  .input
+  .weightCalc
+  .table
+  .tableRow
+  .tableCellLeft {
+  display: table-cell;
+  width: 50%;
+  text-align: right;
+  color: #212529;
+  line-height: 2em;
+  padding: 0 5px;
+}
+
+div.wrapper
+  .card
+  .calculator
+  .input
+  .heightCalc
+  .table
+  .tableRow
+  .tableCellRight,
+div.wrapper
+  .card
+  .calculator
+  .input
+  .weightCalc
+  .table
+  .tableRow
+  .tableCellRight {
+  display: table-cell;
+  background-color: white;
+  width: 50%;
+  text-align: left;
+  padding: 0;
+  border-bottom: 2px solid rgba(222, 226, 230, 0.75);
+}
+
+div.wrapper .card .calculator .separator {
+  border-style: inset;
+  border-width: 1px;
+  margin: 0 auto;
+  opacity: 0.25;
+}
+
+div.wrapper .card .calculator .result {
+  flex: 2;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+}
+
+div.wrapper .card .calculator .result .resultCard {
+  background-color: rgba(222, 226, 230, 0.75);
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #da3737;
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  animation: fadeSlideIn 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+div.wrapper .card .calculator .result .resultCard .resultRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+div.wrapper .card .calculator .result .resultCard .resultRow:last-child {
+  border-bottom: none;
+}
+
+div.wrapper .card .calculator .result .resultCard .resultRow .resultLabel {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+div.wrapper .card .calculator .result .resultCard .resultRow .resultValue {
+  text-align: right;
+}
+
+div.wrapper
+  .card
+  .calculator
+  .result
+  .resultCard
+  .resultRow
+  .resultLabel
+  .resultLabelSub {
+  font-weight: normal;
+  font-size: 0.9em;
+  letter-spacing: normal;
+}
+
+div.wrapper
+  .card
+  .calculator
+  .result
+  .resultCard
+  .resultRow
+  .resultValue
+  .resultSub {
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+div.wrapper .card .credits {
+  width: 100%;
+}
+
+div.wrapper .card .credits ul {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  padding-left: 15px;
+  margin: 5px auto;
+  padding-bottom: 25px;
+}
+
+div.wrapper footer {
+  max-width: 750px;
+  padding: 15px 0 5px 0;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.8em;
+  letter-spacing: 0.08em;
+  word-spacing: 0.5em;
+}
